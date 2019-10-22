@@ -10,12 +10,12 @@ class EmailAddressParser
   def initialize(email_addresses)
     @parse = []
     raw_data = email_addresses.split(/\s|,/)
-    raw_data.each do |email|
-      if email != "" && email != nil && !@parse.include?(email)
-        @parse << email
-      end
-    end
-    # @parse = raw_data.select {|email| email != "" && email != nil && !@parse.include?(email)}
+    # raw_data.each do |email|
+    #   if email != "" && email != nil && !@parse.include?(email)
+    #     @parse << email
+    #   end
+    # end
+    @parse = raw_data.select {|email| email != "" && email != nil}
   end
 
 end
