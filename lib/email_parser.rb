@@ -8,7 +8,7 @@ class EmailAddressParser
   attr_accessor :parse
 
   def initialize(email_addresses)
-    @parse = []
+    # @parse = []
     raw_data = email_addresses.split(/\s|,/)
     # raw_data.each do |email|
     #   if email != "" && email != nil && !@parse.include?(email)
